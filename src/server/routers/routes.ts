@@ -3,6 +3,7 @@ const routes = {
   getRobotsRoute: "/",
   robotByIdRoute: "/:idRobot",
   deleteByIdRoute: "/delete/:idRobot",
+  loginRoute: "/login",
 };
 
 export default routes;
