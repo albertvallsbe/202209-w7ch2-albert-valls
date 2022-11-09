@@ -1,7 +1,7 @@
 import type { Request } from "express";
 import type { JwtPayload } from "jsonwebtoken";
 
-export interface RobotsFeatures {
+interface RobotsFeatures {
   _id: string;
   name: string;
   image: string;
@@ -27,3 +27,5 @@ export interface UserTokenPayload extends JwtPayload {
   id: string;
   username: string;
 }
+
+export default RobotsFeatures;
