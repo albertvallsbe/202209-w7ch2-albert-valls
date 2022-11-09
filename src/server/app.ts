@@ -6,6 +6,7 @@ import routes from "./routers/routes.js";
 import { endPointUnknown } from "./middleware/errors.js";
 import robotRouter from "./routers/robotsRouter.js";
 import cors from "cors";
+import usersRouter from "./routers/usersRouter.js";
 
 const app = express();
 const { robots } = routes;
@@ -23,6 +24,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 app.use("/robots", cors(), robotRouter);
+app.use("/users", cors(), usersRouter);
 
 app.use(robots, robotRouter);
 
